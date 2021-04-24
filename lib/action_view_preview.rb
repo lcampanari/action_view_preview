@@ -5,8 +5,6 @@ module ActionViewPreview
   class Preview
     extend ActiveSupport::DescendantsTracker
 
-    attr_reader :params
-
     class << self
       # Returns all preview classes
       def all
@@ -14,8 +12,8 @@ module ActionViewPreview
         descendants
       end
 
-      # Returns all of the available previews
-      def previews
+      # Returns all of the available views
+      def views
         public_instance_methods(false).map(&:to_s).sort
       end
 

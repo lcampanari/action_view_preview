@@ -4,8 +4,8 @@ Hello index
 <% @previews.each do |preview| %>
   <h3><%= preview.preview_name.titleize %></h3>
   <ul>
-    <% preview.previews.each do |preview| %>
-      <li><%= link_to preview, url_for(controller: "action_view_preview/previews", action: "show", path: "#{preview.preview_name}/#{preview}") %></li>
+    <% preview.views.each do |view| %>
+      <li><%= link_to view, url_for(controller: "action_view_preview", action: "show", path: "#{preview.preview_name}/#{view}") %></li>
     <% end %>
   </ul>
 <% end %>
