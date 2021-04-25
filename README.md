@@ -21,6 +21,12 @@ Or install it yourself as:
 $ gem install action_view_preview
 ```
 
+## Develop
+
+1. Clone this repo
+2. `rails s` on the root dir
+3. Add view previews on `test/dummy/test/views/previews`
+4. See view previews on `http://localhost:3000/action_view_preview/preview`
 ## Contributing
 Contribution directions go here.
 
