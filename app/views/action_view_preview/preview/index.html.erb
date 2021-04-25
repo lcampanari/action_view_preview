@@ -5,7 +5,7 @@ Hello index
   <h3><%= preview.preview_name.titleize %></h3>
   <ul>
     <% preview.views.each do |view| %>
-      <li><%= link_to view, url_for(controller: "action_view_preview", action: "show", path: "#{preview.preview_name}/#{view}") %></li>
+      <li><%= link_to view, url_for(controller: "preview", action: "show", path: "#{preview.preview_name}/#{view}") %></li>
     <% end %>
   </ul>
 <% end %>
