@@ -27,7 +27,6 @@ module ActionViewPreview
           @page_title = "View Preview for #{@preview.preview_name}##{@view_action}"
           @view = @preview.call(@view_action, params)
           render action: "show", layout: false, formats: [:html]
-          # render html: @view.html_safe
         else
           # raise AbstractController::ActionNotFound, "View '#{@view_action}' not found in #{@preview.name}"
           raise "View '#{@view_action}' not found in #{@preview.name}"
