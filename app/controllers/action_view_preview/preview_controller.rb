@@ -4,7 +4,6 @@ module ActionViewPreview
   class PreviewController < ApplicationController
     before_action :find_preview, only: :show
 
-
     def index
       @previews = ActionViewPreview::Preview.all
       @page_title = "View Previews"
