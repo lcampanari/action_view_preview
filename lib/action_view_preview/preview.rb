@@ -55,8 +55,7 @@ module ActionViewPreview
       end
 
       def preview_path
-        # Base.preview_path
-        "#{Rails.root}/test/views/previews"
+        ActionViewPreview.preview_path
       end
     end
   end
