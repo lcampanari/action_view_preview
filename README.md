@@ -1,5 +1,8 @@
 # ActionViewPreview
-Short description and motivation.
+Sometimes being able to preview a view might come in handy, like when a view is going to be used only inside a PDF, for example.
+
+This gem allows a setup similar `ActionMailer::Preview`, and provides a development tool for rendering and debugging views that wouldn't otherwise be rendered in your application.
+
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -54,9 +57,6 @@ Possible config values:
 | Config | Default | Description |
 | - | - | - |
 | `preview_path` | `test/views/previews` | Path to the preview files |
-
-## Contributing
-Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
