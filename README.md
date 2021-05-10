@@ -37,14 +37,24 @@ class HelloViewPreview < ActionViewPreview::Preview
 end
 ```
 
-3. Access the route `/action_view_preview/preview` to see the available previews
+3. Access the route `/action_view_preview` to see the available previews
 
-## Develop
+## Configuration
 
-1. Clone this repo
-2. `rails s` on the root dir
-3. Add view previews on `test/dummy/test/views/previews`
-4. See view previews on `http://localhost:3000/action_view_preview/preview`
+Add a `ActionViewPreview.setup` block to an initializer, for example:
+
+```ruby
+ActionViewPreview.setup do |config|
+  config.preview_path = "#{Rails.root}/lib/view_previews"
+end
+```
+
+Possible config values:
+
+| Config | Default | Description |
+| - | - | - |
+| `preview_path` | `test/views/previews` | Path to the preview files |
+
 ## Contributing
 Contribution directions go here.
 
