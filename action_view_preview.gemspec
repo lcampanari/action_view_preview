@@ -3,11 +3,12 @@ require_relative "lib/action_view_preview/version"
 Gem::Specification.new do |spec|
   spec.name        = "action_view_preview"
   spec.version     = ActionViewPreview::VERSION
+  spec.platform     = Gem::Platform::RUBY
   spec.authors     = ["Lucas Campanari"]
   spec.email       = ["campanari.ls@gmail.com"]
   spec.homepage    = "https://github.com/lcampanari/action_view_preview"
-  spec.summary     = "Summary of ActionViewPreview."
-  spec.description = "Description of ActionViewPreview."
+  spec.summary     = "Views preview for Rails"
+  spec.description = "Views preview for Rails"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
