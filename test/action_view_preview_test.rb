@@ -13,7 +13,7 @@ class ActionViewPreviewTest < ActiveSupport::TestCase
 
   test 'model options can be configured through ActionViewPreview' do
     new_options = {
-      preview_path: '/'
+      preview_path: '/new_path'
     }
 
     new_options.each do |option, value|

@@ -7,10 +7,13 @@ module ActionViewPreview
   autoload :Base
 
   mattr_accessor :preview_path
-  @@preview_path = "#{Rails.root}/test/views/previews"
 
   def self.setup
     yield self
   end
 
+  def self.preview_path
+    @@preview_path || "#{Rails.root}/test/views/previews"
+  end
+ 
 end
