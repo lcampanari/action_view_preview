@@ -1,5 +1,5 @@
 module ActionViewPreview
-  class Preview
+  class Base
     extend ActiveSupport::DescendantsTracker
 
     attr_reader :params
@@ -31,7 +31,7 @@ module ActionViewPreview
         views.include?(view)
       end
 
-      # Returns the underscored name of the mailer preview without the suffix
+      # Returns the underscored name of the preview without the suffix
       def preview_name
         name.delete_suffix("Preview").underscore
       end

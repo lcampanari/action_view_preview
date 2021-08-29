@@ -5,7 +5,7 @@ module ActionViewPreview
     before_action :find_preview, only: :show
 
     def index
-      @previews = ActionViewPreview::Preview.all
+      @previews = ActionViewPreview::Base.all
       @page_title = "View Previews"
     end
 
@@ -37,10 +37,10 @@ module ActionViewPreview
     def find_preview
       candidates = []
       params[:path].to_s.scan(%r{/|$}) { candidates << $` }
-      preview = candidates.detect { |candidate| ActionViewPreview::Preview.exists?(candidate) }
+      preview = candidates.detect { |candidate| ActionViewPreview::Base.exists?(candidate) }
 
       if preview
-        @preview = ActionViewPreview::Preview.find(preview)
+        @preview = ActionViewPreview::Base.find(preview)
       else
         # raise AbstractController::ActionNotFound, "View preview '#{params[:path]}' not found"
         raise "View preview '#{params[:path]}' not found"
