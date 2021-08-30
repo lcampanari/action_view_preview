@@ -6,7 +6,7 @@ on:
       - "*"
   push:
     branches:
-      - master
+      - main
 
 jobs:
   ruby_test:
@@ -44,7 +44,7 @@ jobs:
       - name: Install postgres
         run: |
           sudo apt-get -yqq install libpq-dev
-      - name: Create Dummy  and Migrate Database
+      - name: create db and run tests
         env:
           PGHOST: localhost
           PGUSER: postgres
