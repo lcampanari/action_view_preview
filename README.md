@@ -1,7 +1,7 @@
 # ActionViewPreview
 Sometimes being able to preview a view might come in handy, like when a view is going to be used only inside a PDF, for example.
 
-This gem allows a setup similar `ActionMailer::Base`, and provides a development tool for rendering and debugging views that wouldn't otherwise be rendered in your application.
+This gem allows a setup similar `ActionMailer::Preview`, and provides a development tool for rendering and debugging views that wouldn't otherwise be rendered in your application.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -44,7 +44,7 @@ end
 
 ## Configuration
 
-Add a `ActionViewPreview.setup` block to an initializer, for example:
+Add a `ActionViewPreview.setup` block to an initializer. For example, if you want to place the preview files in `lib/view_previews`:
 
 ```ruby
 ActionViewPreview.setup do |config|
