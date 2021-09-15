@@ -9,7 +9,7 @@ class ActionViewPreviewGeneratorTest < Rails::Generators::TestCase
 
   test 'creates singular named preview file with given instance methods' do
     run_generator %w[hello first second third]
-    assert_file 'test/views/previews/hello_preview.rb' do |preview_method|
+    assert_file "#{ActionViewPreview.preview_path}/hello_preview.rb" do |preview_method|
       assert_instance_method :first, preview_method
       assert_instance_method :second, preview_method
       assert_instance_method :third, preview_method
