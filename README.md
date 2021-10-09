@@ -21,6 +21,11 @@ $ gem install action_view_preview
 ```
 
 ## Usage
+### Command Line Install
+
+Run `rails generate action_view_preview:install` and the generator should create a `hello_preview.rb` and mount the route in your `routes.rb` file, similar to the steps shown below in the manual install.
+
+### Manual Install
 1. Mount the engine in your `routes.rb`:
 
 ```ruby
