@@ -38,6 +38,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Bundle install
+        env:
+          RAILS_ENV: test  
         run: |
           gem install bundler
           bundle config path vendor/bundle
