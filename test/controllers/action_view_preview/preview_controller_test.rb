@@ -11,6 +11,7 @@ module ActionViewPreview
 
     test "should get show" do
       get preview_show_path('testing_view/test_one')
+      assert_includes response.body, "<b>Hello from test_one</b>"
       assert_response :success
     end
   end

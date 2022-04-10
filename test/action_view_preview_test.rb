@@ -17,12 +17,12 @@ class ActionViewPreviewTest < ActiveSupport::TestCase
     }
 
     new_options.each do |option, value|
-      refute_equal ActionViewPreview.send(option), value
+      refute_equal value, ActionViewPreview.send(option)
     end
 
     swap ActionViewPreview, new_options do 
       new_options.each do |option, value|
-        assert_equal ActionViewPreview.send(option), value
+        assert_equal value, ActionViewPreview.send(option)
       end
     end
   end
