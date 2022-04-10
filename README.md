@@ -49,12 +49,10 @@ end
 
 ## Configuration
 
-Add a `ActionViewPreview.setup` block to an initializer. For example, if you want to place the preview files in `lib/view_previews`:
+Use `config.action_view_preview` on `config/application.rb` to add custom configuration. For example, if you want to place the preview files in `lib/view_previews`: 
 
 ```ruby
-ActionViewPreview.setup do |config|
-  config.preview_path = "#{Rails.root}/lib/view_previews"
-end
+config.action_view_preview.preview_path = "#{Rails.root}/lib/view_previews"
 ```
 
 Possible config values:
